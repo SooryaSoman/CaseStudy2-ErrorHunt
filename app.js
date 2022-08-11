@@ -6,34 +6,11 @@ const bodyParser = require('body-parser'); //part 1 point 2
 const path = require ('path'); 
 const cors = require('cors');//part2 point 7
 
-const nav= [
-    {
-        link:"/books",
-        title:"Books"
-    },
-    {
-        link:"/authors",
-        title:"Authors"
-    },
-    {
-        link:"/addbook",
-        title:"Add Book"
-    },
-    {
-        link:"/addauthor",
-        title:"Add Author"
-    }
-];
-
 const loginRouter = require('./src/routes/loginroute');
 const signupRouter = require('./src/routes/signuproute');
-const homeRouter = require('./src/routes/homerouter');//part1 point3
+const homeRouter = require('./src/routes/homeroute');//part1 point3
 const booksRouter = require('./src/routes/booksroute');
 const authorsRouter = require('./src/routes/authorsroute');
-
-
-
-
 app.set('views','./src/views'); 
 app.set('view engine','ejs'); 
 
@@ -54,15 +31,9 @@ app.use('/authors',authorsRouter);
 
 app.get('/',function(req,res){
 
-    res.render('index',
-    {
-        nav
-    });
+    res.render('index', {});
     
 });
-
-
-
 
 
 app.listen(5000,()=>{
