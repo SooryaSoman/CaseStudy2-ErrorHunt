@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://sooryasoman:soorya@123@cluster0.4zvh3tt.mongodb.net/?retryWrites=true&w=majority/Library');
+mongoose.connect('mongodb+srv://sooryasoman:soorya01!@cluster0.9bcz4c6.mongodb.net/library?retryWrites=true&w=majority');
 const Schema = mongoose.Schema;
-
+console.log("database is ready");
 
 const AuthorSchema = new Schema({
     title : String,
